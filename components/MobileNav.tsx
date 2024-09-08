@@ -14,6 +14,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import LogoLink from "./LogoLink";
 const MobileNav = ({ user }: MobileNavProps) => {
   const pathName = usePathname();
   return (
@@ -29,20 +30,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
           />
         </SheetTrigger>
         <SheetContent side="left" className="border-none bg-white">
-          <Link
-            href="/"
-            className="cursor-pointer flex items-center gap-1 px-4"
-          >
-            <Image
-              src="/icons/logo.svg"
-              width={34}
-              height={34}
-              alt="horizon-logo"
-            />
-            <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">
-              Horizon
-            </h1>
-          </Link>
+          <LogoLink applyPadding={true} />
           <div className="mobilenav-sheet">
             <SheetClose asChild>
               <nav className="flex h-full flex-col gap-6 pt-16 text-white">
