@@ -37,10 +37,10 @@ const Sidebar = ({ user }: SiderbarProps) => {
                   fill
                   className={cn({ "brightness-[3] invert-0": isActive })}
                 />
-                <p className={cn("sidebar-label", { "!text-white": isActive })}>
-                  {link.label}
-                </p>
               </div>
+              <p className={cn("sidebar-label", { "!text-white": isActive })}>
+                {link.label}
+              </p>
             </Link>
           );
         })}
